@@ -8,6 +8,21 @@ class BinarySearchTree:
     pass    
 
   def breadth_first_for_each(self, cb):
+    # start at the root
+
+    # place the root node in a queue
+
+    # while there is anything in the queue
+    
+	    # remove the first element in the queue (dequeue)
+        
+		    # if what has been dequeued has a left node
+            
+			    # enqueue the left node
+        
+		    # if what has been dequeued has a right node
+            
+			    # enqueue the right node
     pass
 
   def insert(self, value):
