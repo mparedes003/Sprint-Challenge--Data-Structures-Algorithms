@@ -1,39 +1,23 @@
-'''# To heapify subtree rooted at index i. 
-# n is size of heap 
-def heapify(arr, n, i):
-    largest = i  # Initialize largest as root 
-    l = 2 * i + 1  # left = 2*i + 1 
-    r = 2 * i + 2  # right = 2*i + 2  
-
-    # if left child of root exists and is greater than root 
-    if l < n and arr[i] < arr[l]:
-        largest = l
-
-    # if right child of root exists and is greater than root     
-    if r < n and arr[largest] < arr[r]:
-        largest = r
-
-    # Change root, if needed     
-    if largest != i:
-        arr[i],arr[largest] = arr[largest],arr[i] # swap 
-
-        # heapify the root
-        heapify(arr, n, largest)'''
-
 def heapsort(arr):
 # create a new empty heap
-  new_heap = []
+  new_heap = Heap()
+
 # loop over all elements in the array and insert each element in to the heap
   for i in arr:
-    new_heap.append(i)
-# create an empty array to put the sorted stuff in
-  sorted = []
-# oop over the storage of the heap appending the items to the new array
-  for i in Heap.storage:
-    sorted.append(i)
-# reverse the array
-  reverse_sorted = sorted[::-1]
+    new_heap.insert(i)
 
+# create an empty array to put the sorted stuff in
+  sorted_list = []
+
+# loop over the storage of the heap appending the items to the new array
+  while len(new_heap.storage) > 0:
+    sorted_list.append(new_heap.delete()) # decending
+
+# reverse the array ascending
+  sorted_list.reverse()
+
+# return sorted_list
+  return sorted_list
 
 class Heap:
   def __init__(self):

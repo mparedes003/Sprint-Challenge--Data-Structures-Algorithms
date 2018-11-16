@@ -2,6 +2,9 @@ Add your answers to the Algorithms exercises here.
 
 a) O(n)
 
-b) O(c^n)
+b) O(n^3)
 
-c) O(c)
+c) O(n)
+
+Exercise II
+O(log n)

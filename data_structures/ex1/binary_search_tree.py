@@ -5,24 +5,24 @@ class BinarySearchTree:
     self.right = None
 
   def depth_first_for_each(self, cb):
-    pass    
+    # invoke callback on the node
+    cb(self.value)
+
+    # if the node is None
+    if self.value is None:
+      # return None
+      return None
+
+    # if there is a node on the left child of the parent on the tree, recursively call the depth_first_for_each on the left
+    if self.left:
+      self.left.depth_first_for_each(cb)
+    
+    # if there is a node on the right child of the parent on the tree, recursively call the depth_first_for_each on the right
+    if self.right:
+      self.right.depth_first_for_each(cb)
+    
 
   def breadth_first_for_each(self, cb):
-    # start at the root
-
-    # place the root node in a queue
-
-    # while there is anything in the queue
-    
-	    # remove the first element in the queue (dequeue)
-        
-		    # if what has been dequeued has a left node
-            
-			    # enqueue the left node
-        
-		    # if what has been dequeued has a right node
-            
-			    # enqueue the right node
     pass
 
   def insert(self, value):
