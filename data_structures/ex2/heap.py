@@ -11,9 +11,9 @@ def heapsort(arr):
 
 # loop over the storage of the heap appending the items to the new array
   while len(new_heap.storage) > 0:
-    sorted_list.append(new_heap.delete()) # decending
+    sorted_list.append(new_heap.delete())
 
-# reverse the array ascending
+# reverse the array
   sorted_list.reverse()
 
 # return sorted_list
